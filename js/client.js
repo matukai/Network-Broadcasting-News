@@ -14,7 +14,7 @@ client.on('data', (data) => {
   console.log(data.toString());
 });
 //harcoded writing to socket
-client.write('world\r\n');
+client.write('client: hello server');
 
 
 // process.stdin.setEncoding('utf8');
