@@ -2,8 +2,7 @@ const net = require('net');
 
 let client = net.createConnection({ port: 6969 , host: `0.0.0.0`}, () => {
   //connect listener
-  console.log('client: connected to server!');
-
+  console.log('you are connected to server!');
 
 //piping data to connection
   process.stdin.pipe(client);
@@ -14,7 +13,6 @@ client.on('data', (data) => {
   console.log(data.toString());
 });
 //harcoded writing to socket
-client.write('client: hello server');
 
 
 // process.stdin.setEncoding('utf8');
